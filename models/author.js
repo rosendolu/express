@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const AuthorSchema = new Schema({
-	first_name: { type: String, required: true, max: 100 },
-	family_name: { type: String, required: true, max: 100 },
+	first_name: { type: String, required: true },
+	family_name: { type: String, required: true },
 	date_birth: { type: Date },
 	date_death: { type: Date },
 });
@@ -17,4 +17,4 @@ AuthorSchema.virtual('listSpan').get(() => {
 AuthorSchema.virtual('url').get(() => {
 	return '/catalog/author' + this._id;
 });
-module.exports = new AuthorSchema('Author', AuthorSchema);
+module.exports = mongoose.model('Author', AuthorSchema);
