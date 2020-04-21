@@ -5,6 +5,6 @@ const users = require('./users')(router);
 const catelog = require('./catelog')(router);
 module.exports = (app) => {
 	app.use('/', index);
-	app.use('/users', users);
 	app.use('/catelog', catelog);
+	app.use('/users', users);
 };

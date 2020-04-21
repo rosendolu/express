@@ -1,9 +1,15 @@
 extends layout
-
 block content
+  ul.list
+    li 
+      a(href='/catelog') catelog
+    li
+      a(href='/catelog/books') catelog/books
   h1 #{title} 
   p Welcome to #{title}
   .header header 
   .main main
-  .footer footer 
+    #{ data }
+  .footer footer
+
   

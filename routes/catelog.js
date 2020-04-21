@@ -5,7 +5,7 @@ const bookInstanceCtrl = require('../controllers/bookInstanceCtrl');
 const genreCtrl = require('../controllers/genreCtrl');
 
 module.exports = (router) => {
-	router.all('/', book_controller.index);
+	router.all('/book/list', book_controller.index);
 
 	// GET 请求添加新的藏书。注意此项必须位于显示藏书的路由（使用了 id）之前。
 	router.all('/book/create', book_controller.book_create_get);
